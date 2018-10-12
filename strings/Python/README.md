@@ -6,7 +6,8 @@ O script presente no arquivo 'src/script.py' soluciona tanto a parte 1 como a 2,
 ```Shell
 python src/script.py [source] [--limit/-n] [--justified] [--write] [--help/-h]
 ```
-O uso pode ser notado de acordo com a tabela:
+O uso pode ser notado de acordo com a tabela:\
+
 | Campo       | Obrigatório   | Descrição
 | ---         | ---           | ---   
 | source      | sim           | O arquivo de origem
