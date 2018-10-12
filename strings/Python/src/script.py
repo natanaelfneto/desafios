@@ -121,7 +121,7 @@ def args(args):
         raise ValueError(output)
         sys.exit()
 
-    # call tail sources function
+    # call function
     run(
         source=args.source,
         limit=args.limit,
@@ -130,7 +130,7 @@ def args(args):
     )
 
 
-# function to check and tail files
+# run function
 def run(source=None, limit=None, justified=False, write=False):
     '''
         Argument(s):
