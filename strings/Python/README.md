@@ -7,13 +7,13 @@ O script presente no arquivo 'src/script.py' soluciona tanto a parte 1 como a 2,
 python src/script.py [source] [--limit/-n] [--justified] [--write] [--help/-h]
 ```
 O uso pode ser notado de acordo com a tabela:
-Campo       | Obrigatório   | Descrição
----         | ---           | ---   
-source      | sim           | O arquivo de origem
---limit/-n  | sim           | O limit de caracteres por linha
---justified | não           | Justifica o conteúdo da saída         
---write     | não           | Escreve em um arquivo a saída (omitindo do terminal)
---help/-h   | não           | Escreve no terminal um texto de ajuda
+| Campo       | Obrigatório   | Descrição
+| ---         | ---           | ---   
+| source      | sim           | O arquivo de origem
+| --limit/-n  | sim           | O limit de caracteres por linha
+| --justified | não           | Justifica o conteúdo da saída
+| --write     | não           | Escreve em um arquivo a saída (omitindo do terminal)
+| --help/-h   | não           | Escreve no terminal um texto de ajuda
 
 ### Parte 1
 Para obter o resultado semelahnte ao exemplificado em output_parte1.txt:
