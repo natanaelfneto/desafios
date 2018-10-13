@@ -118,14 +118,15 @@ STATUS: 200
 REASON: OK
 4 out of 4 request sent
 ```
+
 E responderá no telegram:
----
+
 THREAD: **cats.** [thread link](http://www.reddit.com/r/cats./)
     No threads with more than 5k upvotes could be retrieved, try again in a few minutes
----
+
 THREAD: **brazil** [thread link](http://www.reddit.com/r/brazil/)
     No threads with more than 5k upvotes could be retrieved, try again in a few minutes
----
+
 THREAD: **cats** [thread link](http://www.reddit.com/r/cats/)
         
 **title**: The scent of spring | by Natalya Bachkova [1200x866]
