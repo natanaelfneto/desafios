@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-__project__ = 'crawler_bot'
+__project__ = 'reddit_crawler'
 __author__ = 'natanaelfneto'
 __description__ = "An apprentice scrapper bot"
 
@@ -19,12 +19,11 @@ import bs4
 # base url for reddit
 base_url = 'www.reddit.com'
 
-# subreddits scrapped
-scrapped_subs = []
+# check if upvotes are higher than N * 1000
+minimum_votes = 5
 
 # start connection
 headers = { 'User-Agent' : __description__ }
-connection = http.client.HTTPSConnection(base_url)
 
 
 # get item upvotes
@@ -37,9 +36,6 @@ def get_upvotes(div):
     # get div content
     content = div.get_text()
 
-    # check if upvotes are higher than N * 1000
-    minimum_value = 5
-
     # try to parse upvotes number
     try:
         if 'k' in content.split('Posted by')[0]:
@@ -47,8 +43,8 @@ def get_upvotes(div):
             # check if value can be parsed as a float number
             upvotes = float(content.split('Posted by')[0].replace('k',''))
 
-            # check if it is bigger than 5000
-            if upvotes > 5:
+            # check if it is bigger than minimum value
+            if upvotes > minimum_votes:
                 upvotes = '{0}k'.format(str(upvotes))
             else:
                 upvotes = None
@@ -143,7 +139,34 @@ def get_subthread_link(div):
         return '{0}{1}{2}'.format('https://', base_url, href)
     else:
         return 'No subthreads were found'
-    
+
+
+# get html from connection
+def get_connection_html(sub):
+
+    # try closing any lost connection
+    try:
+        # finish connection
+        connection.close()
+    except:
+        pass
+
+    # number of attempts to retrieve posts
+    for i in range(5):
+
+        # set connection instance
+        connection = http.client.HTTPSConnection(base_url)
+
+        # get request for sub content
+        connection.request('GET', '/r/{0}'.format(sub), headers=headers)
+
+        # get response
+        html = connection.getresponse()
+
+        if str(html.status) == '200':
+            break
+
+    return html
 
 # command line argument parser
 def args(args):
@@ -173,7 +196,7 @@ def args(args):
 
 
 # run function
-def run(threads=None):
+def run(threads=None, api=False):
     '''
     Argument(s):
         threads: names for threads that will be crawled
@@ -181,25 +204,23 @@ def run(threads=None):
 
     # aux variable
     subs = threads
+    scrapped_subs = []
 
     # loop through subs
     for sub in subs:
 
         # aux variable
-        array = []  
+        array = []
 
-        # get request for sub content
-        connection.request('GET', '/r/{0}'.format(sub), headers=headers)
-
-        # get response
-        html = connection.getresponse()
+        # get html response from connection
+        html = get_connection_html(sub)
 
         # output connection status and reason
-        output = 'URL: https://{0}/r/{1}\nSTATUS: {2}\nREASON: {3}\n'.format(base_url, sub, html.status, html.reason)
+        output = '\nURL: https://{0}/r/{1}\nSTATUS: {2}\nREASON: {3}'.format(base_url, sub, html.status, html.reason)
         print(output)
 
         if str(html.status) != '200':
-            raise ValueError('Problem with server response, please try again!')
+            print('Issue with server response')
 
         # soup html content
         soup = bs4.BeautifulSoup(html,'lxml')
@@ -235,17 +256,29 @@ def run(threads=None):
                         'subthread_link': str(subthread_link)
                     })
         
-        # append sub content in a global dictionary
+        # for api call reset scrapped variable
+        if api:
+            scrapped_subs = []
+
+        # append sub content in a dictionary
         scrapped_subs.append({
             str(sub): array
         })
 
-    # console output
-    output = json.dumps(scrapped_subs, sort_keys=True, indent=4)
-    print(output)
+    # try closing any lost connection
+    try:
+        # finish connection
+        connection.close()
+    except:
+        pass
 
-    # finish connection
-    connection.close()
+    # check is api call to determinate output
+    if not api:
+        # console output
+        output = json.dumps(scrapped_subs, sort_keys=True, indent=4)
+        print(output)
+    else:
+        return (scrapped_subs[0], html.status)
 
 
 # run function on command call
