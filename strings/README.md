@@ -31,3 +31,7 @@ substitua o nome do arquivo pelo do exemplo:
 ```Shell
 python script.py example.txt --limit 40 [--justified] --write
 ```
+
+OBS: Não foi utilizado o formato 'nome;nome' por dois motivos principais:
+1. quando usado em linha de comando ';' inicia um novo comando, sendo que python script.py cats;dogs inicia o script para 'cats' e tenta iniciar um comando 'dogs'.
+2. reddit aceita threads com ';' ficando impossibilitado de se obter as postagens para estes tópicos caso se use ';' como separador.
