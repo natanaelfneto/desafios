@@ -121,26 +121,25 @@ REASON: OK
 
 E responderá no telegram:
 
-THREAD: **cats.** [thread link](http://www.reddit.com/r/cats./)
+THREAD: **cats.** [thread link](http://www.reddit.com/r/cats./)\
     No threads with more than 5k upvotes could be retrieved, try again in a few minutes
 
-THREAD: **brazil** [thread link](http://www.reddit.com/r/brazil/)
+THREAD: **brazil** [thread link](http://www.reddit.com/r/brazil/)\
     No threads with more than 5k upvotes could be retrieved, try again in a few minutes
 
-THREAD: **cats** [thread link](http://www.reddit.com/r/cats/)
+THREAD: **cats** [thread link](http://www.reddit.com/r/cats/)\
         
-**title**: The scent of spring | by Natalya Bachkova [1200x866]
-**upvotes**: 5.8k
-link to commentaries: [link](https://www.reddit.com/r/cats/comments/9nswzp/the_scent_of_spring_by_natalya_bachkova_1200x866/)
-link to subthread: [link](https://www.reddit.com/r/cats/search?q=flair_name%253A%2522Cat%2520Picture%2522&restrict_sr=1)
+**title**: The scent of spring\
+**upvotes**: 5.8k\
+link to commentaries: [link](https://www.reddit.com/r/cats/comments/9nswzp/the_scent_of_spring_by_natalya_bachkova_1200x866/)\
+link to subthread: [link](https://www.reddit.com/r/cats/search?q=flair_name%253A%2522Cat%2520Picture%2522&restrict_sr=1)\
 
-**title**: Not this year
-**upvotes**: 11.3k
-link to commentaries: [link](https://www.reddit.com/r/cats/comments/9nocwr/not_this_year/)
-link to subthread: [link](https://www.reddit.com/r/cats/search?q=flair_name%253A%2522Cat%2520Picture%2522&restrict_sr=1)
+**title**: Not this year\
+**upvotes**: 11.3k\
+link to commentaries: [link](https://www.reddit.com/r/cats/comments/9nocwr/not_this_year/)\
+link to subthread: [link](https://www.reddit.com/r/cats/search?q=flair_name%253A%2522Cat%2520Picture%2522&restrict_sr=1)\
 
-**title**: Recently lost my two cats that my wife and I had for 10 years. The house felt too empty so we got these two floofs to bring some energy back to the home.
-**upvotes**: 9.4k
-link to commentaries: [link](https://www.reddit.com/r/cats/comments/9nmevi/recently_lost_my_two_cats_that_my_wife_and_i_had/)
-link to subthread: [link](https://www.reddit.com/r/cats/search?q=flair_name%253A%2522Mourning%252FLoss%2522&restrict_sr=1)
----
+**title**: Recently lost my two cats that my wife and I had for 10 years. The house felt too empty so we got these two floofs to bring some energy back to the home.\
+**upvotes**: 9.4k\
+link to commentaries: [link](https://www.reddit.com/r/cats/comments/9nmevi/recently_lost_my_two_cats_that_my_wife_and_i_had/)\
+link to subthread: [link](https://www.reddit.com/r/cats/search?q=flair_name%253A%2522Mourning%252FLoss%2522&restrict_sr=1)\
