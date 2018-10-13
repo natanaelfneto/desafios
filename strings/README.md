@@ -17,17 +17,17 @@ O uso pode ser notado de acordo com a tabela:
 ### Parte 1
 Para obter o resultado semelahnte ao exemplificado em output_parte1.txt:
 ```Shell
-python script.py quote.txt --lines 40 --write
+python script.py quote.txt --limit 40 --write
 ```
 
 ### Parte 2
 Para obter o resultado semelhante ao exemplificado em output_parte2.txt:
 ```
-python script.py quote.txt --lines 40 --justified --write
+python script.py quote.txt --limit 40 --justified --write
 ```
 
 ##### OBS: Para obter um resultado idêntico (mesmo conteúdo):
 substitua o nome do arquivo pelo do exemplo:
 ```Shell
-python script.py example.txt --lines 40 [--justified] --write
+python script.py example.txt --limit 40 [--justified] --write
 ```
