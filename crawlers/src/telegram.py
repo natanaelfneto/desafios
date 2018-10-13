@@ -163,7 +163,7 @@ def handler(msg):
                 sent_requests += 1
 
                 # output sent requests
-                output = '{0} out of {1} request successfully sent'.format(sent_requests, total_requests)
+                output = '{0} out of {1} request sent'.format(sent_requests, total_requests)
                 print(output)
             
             # 

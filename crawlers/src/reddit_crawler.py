@@ -168,6 +168,7 @@ def get_connection_html(sub):
 
     return html
 
+
 # command line argument parser
 def args(args):
     '''
@@ -220,7 +221,7 @@ def run(threads=None, api=False):
         print(output)
 
         if str(html.status) != '200':
-            print('Issue with server response')
+            print('No server response')
 
         # soup html content
         soup = bs4.BeautifulSoup(html,'lxml')

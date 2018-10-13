@@ -132,7 +132,7 @@ THREAD: **cats** [thread link](http://www.reddit.com/r/cats/)
 **title**: The scent of spring\
 **upvotes**: 5.8k\
 link to commentaries: [link](https://www.reddit.com/r/cats/comments/9nswzp/the_scent_of_spring_by_natalya_bachkova_1200x866/)\
-link to subthread: [link](https://www.reddit.com/r/cats/search?q=flair_name%253A%2522Cat%2520Picture%2522&restrict_sr=1)\
+link to subthread: [link](https://www.reddit.com/r/cats/search?q=flair_name%253A%2522Cat%2520Picture%2522&restrict_sr=1)
 
 **title**: Not this year\
 **upvotes**: 11.3k\
